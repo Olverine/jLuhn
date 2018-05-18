@@ -78,7 +78,7 @@ public class Luhn {
     
     private static IllegalArgumentException createIllegalArgException(NumberFormatException e, String digit){
     	StringBuffer strBuf = new StringBuffer("");
-    	strBuf.append("The number can not be verified since it contains an illegal character: '");
+    	strBuf.append("The number sequence contains an illegal character: '");
     	strBuf.append(digit);
     	strBuf.append("'. ");
     	strBuf.append("Please consider ignoring this character.");
