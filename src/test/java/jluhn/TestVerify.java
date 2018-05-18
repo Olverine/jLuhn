@@ -7,7 +7,7 @@ import org.junit.Assert;
 public class TestVerify {
 	
 	@Test
-	public void testVerifyValidNumbers() throws LuhnException {
+	public void testVerifyValidNumbers() {
 		String[] testNumbers = new String[] {
 				"8112189876",
 				"4485010200834104",
@@ -22,7 +22,7 @@ public class TestVerify {
 	}
 	
 	@Test
-	public void testVerifyInvalidNumbers() throws LuhnException {
+	public void testVerifyInvalidNumbers()  {
 		String[] testNumbers = new String[] {
 				"8112189874",
 				"4485010200834101",
@@ -37,7 +37,7 @@ public class TestVerify {
 	}
 	
 	@Test
-	public void testIgnoreCharacterAndVerify() throws LuhnException {
+	public void testIgnoreCharacterAndVerify() {
 		String number = "811218-9876";
 		boolean valid = Luhn.verify(number, "-");
 		Assert.assertTrue(number + " is valid but was determined to be invalid", valid);
@@ -56,7 +56,7 @@ public class TestVerify {
 			try {
 				Luhn.verify(number);
 				Assert.fail("No exception caught!");
-			} catch (LuhnException e) {
+			} catch (IllegalArgumentException e) {
 				e.printStackTrace();
 			} catch (Exception e) {
 				Assert.fail("Exception was not of the expected type!");
