@@ -2,7 +2,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>oliver.norin</groupId>
   <artifactId>jluhn</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
+  <version>0.0.1</version>
   <name>jLuhn</name>
   <description>Java implementation of the Luhn algorithm.</description>
 </project>
